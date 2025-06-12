@@ -1,27 +1,30 @@
-# 🧠 PDF Summarizer with RAG (Retrieval-Augmented Generation)
+# 🤖 RAG_WEB_DATA_EXTRACTOR
 
-This project is a Retrieval-Augmented Generation (RAG) pipeline built using [LangChain](https://www.langchain.com/), which summarizes PDF documents intelligently using a HuggingFace LLM and embedding model.
+A smart, retrieval-augmented generation (RAG) pipeline that extracts and summarizes data directly from web pages using [LangChain](https://www.langchain.com/) and Hugging Face's `TinyLlama` model. This version includes full error handling, logging, and a reusable function for flexible deployment.
 
 ---
 
-## 📚 Features
+## 🚀 Features
 
-- 🧾 Load and read PDF files
-- ✂️ Split content into manageable chunks
-- 🧠 Generate vector embeddings using `all-MiniLM-L6-v2`
-- 🔍 Retrieve relevant chunks with vector similarity search (Chroma DB)
-- 📝 Summarize using `TinyLlama-1.1B-Chat` model via HuggingFace Hub
+- 🌐 Extracts data from web pages using `WebBaseLoader`
+- ✂️ Splits text into optimized chunks for processing
+- 🧠 Generates semantic embeddings with `all-MiniLM-L6-v2`
+- 🔍 Retrieves contextually relevant content using Chroma vector store
+- 📝 Summarizes web content using `TinyLlama-1.1B-Chat` via HuggingFace Hub
+- 🔁 Includes a reusable function: `create_rag_pipeline(url, query, api_token)`
+- ✅ Enhanced error handling and debug-friendly output
 
 ---
 
 ## 🛠️ Installation
 
-Make sure you have Python 3.8+ installed.
+Ensure you have **Python 3.8+** installed.
+
+Install all required packages using the `requirements.txt` file:
 
 Install core dependencies:
 
 ```bash
-install all required packages using the requirements.txt file:
 
 pip install -r requirements.txt
 
